@@ -65,14 +65,14 @@ CLI options:
     If you use the ``--cov-branch`` option then coverage's ``branch`` option will also get overridden.
 
 If you wish to always run pytest-cov with pytest, you can use ``addopts`` under the ``pytest`` or ``tool:pytest`` section of
-your ``setup.cfg``, or the ``tool.pytest.ini_options`` section of your ``pyproject.toml`` file.
+your :file:`setup.cfg`, or the ``tool.pytest.ini_options`` section of your :file:`pyproject.toml` file.
 
-For example, in ``setup.cfg``: ::
+For example, in :file:`setup.cfg`: ::
 
     [tool:pytest]
     addopts = --cov=<project-name> --cov-report html
 
-Or for ``pyproject.toml``: ::
+Or for :file:`pyproject.toml`: ::
 
     [tool.pytest.ini_options]
     addopts = "--cov=<project-name> --cov-report html"
@@ -87,9 +87,9 @@ Caveats
 =======
 
 An unfortunate consequence of coverage.py's history is that :file:`.coveragerc` is a magic name: it's the default file but it also
-means "try to also lookup coverage configuration in ``tox.ini`` or ``setup.cfg``".
+means "try to also lookup coverage configuration in :file:`tox.ini` or :file:`setup.cfg`".
 
-In practical terms this means that if you have multiple configuration files around (``tox.ini``, ``pyproject.toml`` or ``setup.cfg``) you
+In practical terms this means that if you have multiple configuration files around (:file:`tox.ini`, :file:`pyproject.toml` or :file:`setup.cfg`) you
 might need to use ``--cov-config`` to make coverage use the correct configuration file.
 
 Also, if you change the working directory and also use subprocesses in a test you might also need to use ``--cov-config`` to make pytest-cov
