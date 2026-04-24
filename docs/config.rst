@@ -22,7 +22,7 @@ CLI options:
 
 .. option:: --cov-config PATH
 
-    Config file for coverage. Default: .coveragerc
+    Config file for coverage. Default: :file:`.coveragerc`
 
 .. option:: --no-cov-on-fail
 
@@ -56,10 +56,10 @@ CLI options:
 .. note:: Important Note
 
     This plugin overrides the ``parallel`` option of coverage. Unless you also run coverage without pytest-cov it's
-    pointless to set those options in your ``.coveragerc``.
+    pointless to set those options in your :file:`.coveragerc`.
 
     If you use the ``--cov=something`` option (with a value) then coverage's ``source`` option will also get overridden.
-    If you have multiple sources it might be easier to set those in ``.coveragerc`` and always use ``--cov`` (without a value)
+    If you have multiple sources it might be easier to set those in :file:`.coveragerc` and always use ``--cov`` (without a value)
     instead of having a long command line with ``--cov=pkg1 --cov=pkg2 --cov=pkg3 ...``.
 
     If you use the ``--cov-branch`` option then coverage's ``branch`` option will also get overridden.
@@ -86,7 +86,7 @@ Or for ``pyproject.toml``: ::
 Caveats
 =======
 
-An unfortunate consequence of coverage.py's history is that ``.coveragerc`` is a magic name: it's the default file but it also
+An unfortunate consequence of coverage.py's history is that :file:`.coveragerc` is a magic name: it's the default file but it also
 means "try to also lookup coverage configuration in ``tox.ini`` or ``setup.cfg``".
 
 In practical terms this means that if you have multiple configuration files around (``tox.ini``, ``pyproject.toml`` or ``setup.cfg``) you
