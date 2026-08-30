@@ -70,4 +70,4 @@ For parallel runs we need to set some dependencies and have an extra report env 
     commands = coverage erase
 
 Depending on your project layout you might need extra configuration, see the working examples at
-https://github.com/pytest-dev/pytest-cov/tree/main/examples for two common layouts.
+https://github.com/pytest-dev/pytest-cov/tree/master/examples for two common layouts.
